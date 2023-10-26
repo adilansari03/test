@@ -1,0 +1,140 @@
+<style>
+    .creating-multiple-view-slider-2 {
+        position: relative;
+    }
+
+    .creating-multiple-view-slider-2 .single-hs-item {
+        aspect-ratio: 5/3;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        margin: 0 5px;
+    }
+
+    .creating-multiple-view-slider-2 .item-bg1 {
+        background-image: url(https://houseofbluebeans.com/wp-content/uploads/2023/08/different-camera-angels-prduct-2.webp);
+    }
+
+    .creating-multiple-view-slider-2 .item-bg2 {
+        background-image: url(https://houseofbluebeans.com/wp-content/uploads/2023/10/different-camera-angels-prduct-3.webp);
+    }
+
+
+    .owl-carousel .owl-nav button.owl-prev {
+        position: absolute;
+        left: 7px;
+        top: 50%;
+        color: #F1F1F1 o !important;
+        font-size: 70px;
+        margin: -40px 0 0;
+        border-radius: 0;
+        height: 50px;
+        width: 50px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        color: #F1F1F1 !important;
+        font-size: 70px;
+        margin: -40px 0 0;
+        border-radius: 0;
+        height: 50px;
+        width: 50px;
+    }
+
+    .owl-theme .owl-nav {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background: #ffffff00 !important;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .owl-theme .owl-nav span {
+        margin-top: -35px;
+        display: block;
+        font-weight: 300;
+        font-size: 70px !important;
+    }
+
+    .creating-multiple-view-slider-2 .owl-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px !important;
+        display: none !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot {
+        height: 15px;
+        width: 15px;
+    }
+
+    .creating-multiple-view-slider-2 .owl-theme .owl-dots .owl-dot span {
+        width: 11px;
+        height: 20px;
+    }
+
+    .creating-multiple-view-slider-2 .owl-theme .owl-dots .owl-dot.active span,
+    .creating-multiple-view-slider-2 .owl-theme .owl-dots .owl-dot:hover span {
+        background: #ff3547;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .single-hs-item {
+            height: 350px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            top: auto;
+            margin: 0;
+            bottom: 0px;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            top: auto;
+            margin: 0;
+            bottom: 0px;
+        }
+
+        .owl-dots {
+            bottom: 10px;
+            left: 50px;
+            right: 50px;
+        }
+    }
+</style>
+
+<!-- Sliders -->
+<div class="creating-multiple-view-slider-2 owl-carousel owl-theme">
+    <div class="single-hs-item item-bg1"></div>
+    <div class="single-hs-item item-bg2"></div>
+</div>
+<!-- Slider -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    jQuery('.creating-multiple-view-slider-2').owlCarousel({
+        items: 2,
+        loop: true,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    })
+</script>
